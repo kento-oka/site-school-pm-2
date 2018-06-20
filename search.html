@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>学生一覧</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="">マイページ</a>
+            </li>
+            <li>
+                <a href="./search.html">学生一覧</a>
+            </li>
+            <li>
+                <a href="./detail.html">学生詳細</a>
+            </li>
+            <li>
+                <a href=""></a>
+            </li>
+            <li>
+                <a href="./login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>検索</h2>
+                <div class="tabs">
+                    <input name="tab_item" id="number" type="radio" checked>
+                    <label for="number">学籍番号で検索</label>
+                    <input name="tab_item" id="capacity" type="radio">
+                    <label for="capacity">資格</label>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>学籍番号</dt>
+                                <dd>
+                                    <input type="text">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>取得資格</dt>
+                                <dd>
+                                    <select>
+                                        <option>基本情報技術者試験</option>
+                                        <option>応用情報技術者試験</option>
+                                        <option>情報処理安全確保支援士</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>学生一覧</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>学籍番号</th>
+                            <th>出席番号</th>
+                            <th>氏名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200000">1200000</a>
+                            </td>
+                            <td>0X00000</td>
+                            <td>山田太郎</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200001">1200001</a>
+                            </td>
+                            <td>0X00000</td>
+                            <td>山田一郎</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200002">1200002</a>
+                            </td>
+                            <td>0X00000</td>
+                            <td>山田次郎</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200003">1200003</a>
+                            </td>
+                            <td>0X00000</td>
+                            <td>山田三郎</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
