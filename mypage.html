@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>マイページ</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="./mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="./search.html">学生一覧</a>
+            </li>
+            <li>
+                <a href="./detail.html">学生詳細</a>
+            </li>
+            <li>
+                <a href=""></a>
+            </li>
+            <li>
+                <a href="./login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>パスワード変更</h2>
+                <form id="form">
+                    <label for="form_current">現在のパスワード:</label>
+                    <input type="password" id="form_current">
+                    <label for="form_current">新しいパスワード:</label>
+                    <input type="password" id="form_new_1">
+                    <label for="form_current">新しいのパスワード(再入力):</label>
+                    <input type="password" id="form_new_2">
+                    <div class="operations">
+                        <button type="submit">変更</button>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <h2>一括登録</h2>
+                <form>
+                    <label for="form_file">登録データ:</label>
+                    <input type="file" id="form_file">
+                    <p>ファイルはcsv形式で、1列目に学籍番号・2列目に出席番号の形式でなければなりません。</p>
+                    <div class="operations">
+                        <button type="submit">送信</button>
+                    </div>
+                </form>
+            </section>
+            <section>
+                    <h2>一括更新</h2>
+                    <form>
+                        <label for="form_file">更新用データ:</label>
+                        <input type="file" id="form_file">
+                        <p>ファイルはcsv形式で、1列目に学籍番号・2列目に出席番号の形式でなければなりません。</p>
+                        <div class="operations">
+                            <button type="submit">送信</button>
+                        </div>
+                    </form>
+                </section>
+        </div>
+    </main>
+    <script>
+        (function(){
+            document.getElementById("form").addEventListener("submit", function(){
+                alert("パスワードを変更しました。");
+            });
+        })();
+    </script>
+</body>

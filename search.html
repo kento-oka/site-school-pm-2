@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html>
-
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>学生一覧</title>
@@ -16,7 +14,7 @@
     <menu>
         <ul>
             <li>
-                <a href="">マイページ</a>
+                <a href="./mypage.html">マイページ</a>
             </li>
             <li>
                 <a href="./search.html">学生一覧</a>
@@ -38,17 +36,13 @@
                 <h2>検索</h2>
                 <div class="tabs">
                     <input name="tab_item" id="number" type="radio" checked>
-                    <label for="number">学籍番号で検索</label>
+                    <label for="number">学籍番号</label>
                     <input name="tab_item" id="capacity" type="radio">
                     <label for="capacity">資格</label>
                     <div>
                         <form>
-                            <dl>
-                                <dt>学籍番号</dt>
-                                <dd>
-                                    <input type="text">
-                                </dd>
-                            </dl>
+                            <label for="form_1_number">学籍番号:</label>
+                            <input type="text" id="form_1_number">
                             <div class="operations">
                                 <button type="submit">検索</button>
                             </div>
@@ -56,16 +50,14 @@
                     </div>
                     <div>
                         <form>
-                            <dl>
-                                <dt>取得資格</dt>
-                                <dd>
-                                    <select>
-                                        <option>基本情報技術者試験</option>
-                                        <option>応用情報技術者試験</option>
-                                        <option>情報処理安全確保支援士</option>
-                                    </select>
-                                </dd>
-                            </dl>
+                            <label for="form_2_name">資格名:</label>
+                            <select id="form_2_name">
+                                <option>基本情報技術者試験</option>
+                                <option>応用情報技術者試験</option>
+                                <option>情報処理安全確保支援士</option>
+                            </select>
+                            <lable for="form_2_season">取得時期:</lable>
+                            <input type="month" id="form_2_season">
                             <div class="operations">
                                 <button type="submit">検索</button>
                             </div>
@@ -118,5 +110,3 @@
         </div>
     </main>
 </body>
-
-</html>

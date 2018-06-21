@@ -41,8 +41,8 @@ header {
     box-sizing: border-box;
     width: 100%;
     height: 30px;
-    background: #5d5;
-    color: #555;
+    background: #555;
+    color: #fff;
 }
 
 header h1 {
@@ -365,24 +365,6 @@ dl dd:after {
     clear: both;
 }
 
-/* --- form --- */
-form dl{
-    margin-bottom: 10px;
-}
-form .operations{
-    margin: 0;
-    width: 100%;
-    padding: 0;
-}
-form .operations::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-form .operations button{
-    float: right;
-}
-
 /* --- icon --- */
 
 .icon-error, .icon-info, .icon-warn, .icon-null, .icon-check, .icon-cross {
@@ -514,23 +496,98 @@ form .operations button{
     transform: rotate(-50deg);
 }
 
-/* button */
+/* --- form --- */
 
-form button {
-    display: block;
-    margin: 10px auto 0;
-    width: auto;
+form {
+    width: 100%;
     height: auto;
-    border: 0;
-    border-bottom: solid 4px #627295;
-    border-radius: 3px;
-    padding: 0.5em 1em;
-    background: #668ad8;
-    color: #fff;
-    cursor: pointer;
 }
 
+form input[type="text"],
+form input[type="date"],
+form input[type="datetime"],
+form input[type="month"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+form input[type="search"],
+form input[type="time"],
+form input[type="url"], 
+form textarea,
+form select {
+    outline: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+    background: rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    font-size: 16px;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="datetime"]:focus,
+form input[type="month"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form input[type="search"]:focus,
+form input[type="time"]:focus,
+form input[type="url"]:focus,
+form textarea:focus,
+form select:focus {
+    background: #d2d9dd;
+}
+
+form select {
+    height: 35px;
+}
+
+form .operations{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+form input[type="submit"],
+form input[type="button"],
+form button {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 3px;
+    border-bottom: solid 4px #627295;
+    padding: .5em 1em;
+    background: #668ad8;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+form input[type="submit"]:hover,
+form input[type="button"]:hover,
+form button:hover {
+    opacity: .9;
+}
+
+form input[type="submit"]:active,
+form input[type="button"]:active,
 form button:active {
     transform: translateY(4px);
     border-bottom-color: transparent;
+}
+
+form .operations input[type="submit"],
+form .operations form input[type="button"],
+form .operations button{
+    display: inline-block;
+}
+
+form .operations :not(:first-child){
+    margin-left: 10px;
 }
