@@ -60,9 +60,16 @@
             <section>
                     <h2>一括更新</h2>
                     <form>
+                        <label for="form_target">更新内容:</label>
+                        <select id="form_2_target">
+                            <option>出席番号</option>
+                            <option>出身校</option>
+                            <option>取得資格</option>
+                            <option>内定先企業</option>
+                        </select>
                         <label for="form_file">更新用データ:</label>
                         <input type="file" id="form_file">
-                        <p>ファイルはcsv形式で、1列目に学籍番号・2列目に出席番号の形式でなければなりません。</p>
+                        <p>ファイルはcsv形式で、1列目に学籍番号・2列目以降に更新用データの形式でなければなりません。</p>
                         <div class="operations">
                             <button type="submit">送信</button>
                         </div>
