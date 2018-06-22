@@ -504,6 +504,7 @@ form {
 }
 
 form input[type="text"],
+form input[type="tel"],
 form input[type="date"],
 form input[type="datetime"],
 form input[type="month"],
@@ -528,6 +529,7 @@ form select {
 }
 
 form input[type="text"]:focus,
+form input[type="tel"]:focus,
 form input[type="date"]:focus,
 form input[type="datetime"]:focus,
 form input[type="month"]:focus,

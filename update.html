@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>編集 1200000 山田 太郎</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="./mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="./search.html">学生一覧</a>
+            </li>
+            <li>
+                <a href="./detail.html">学生詳細</a>
+            </li>
+            <li>
+                <a href="./update.html">学生情報更新</a>
+            </li>
+            <li>
+                <a href="./login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>1200000 山田 太郎</h2>
+                <form>
+                    <dl>
+                        <dt>学籍番号</dt>
+                        <dd>1200000</dd>
+
+                        <dt>出席番号</dt>
+                        <dd><input type="text" value="0X00000"></dd>
+
+                        <dt>住所</dt>
+                        <dd>実家(郵便番号)：<input type="text" value="0000000"></dd>
+                        <dd>実家(住所)：<input type="text" value="兵庫県大阪市京都町 1024-64-32"></dd>
+                        <dd>自宅(郵便番号)：<input type="text" value=""></dd>
+                        <dd>自宅(住所)：<input type="text" value=""></dd>
+
+                        <dt>氏名</dt>
+                        <dd><input type="text" value="山田 太郎"></dd>
+
+                        <dt>生年月日</dt>
+                        <dd><input type="date" value="1998-02-28"></dd>
+
+                        <dt>連絡先</dt>
+                        <dd>実家：<input type="tel" value="0000-00-0000"></dd>
+                        <dd>自宅：<input type="tel"></dd>
+                        <dd>携帯：<input type="tel" value="000-0000-0000"></dd>
+
+                        <dt>出身校</dt>
+                        <dd><input type="text" value="兵庫県立山田高等学校"></dd>
+
+                        <dt id="sikaku">取得資格</dt>
+                        <dd><input type="text" value="基本情報技術者試験 (平成28年春)"></dd>
+                        <dd><input type="text" value="応用情報技術者試験 (平成28年秋)"></dd>
+                        <dd><input type="text" value="情報処理安全確保支援士(平成29年春)"></dd>
+                        <dd>
+                            <div class="operations">
+                                <button type="button" class="add_dd" data-id="sikaku">追加</button>
+                            </div>
+                        </dd>
+
+                        <dt>内定先企業</dt>
+                        <dd><input type="text" value="山田商会"></dd>
+
+                        <dt id="bikou">備考</dt>
+                        <dd><input type="text" value="ピアノが弾ける"></dd>
+                        <dd><input type="text" value="声が小さい"></dd>
+                        <dd><input type="text" value="高校で1年不登校"></dd>
+                        <dd>
+                            <div class="operations">
+                                <button type="button" class="add_dd" data-id="bikou">追加</button>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="operations">
+                        <button type="submit">確認</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script>
+        (function(){
+            var list    = document.getElementsByClassName("add_dd"),
+                length  = list.length
+            ;
+            for (var i = 0; i < length; i++) {
+                list[i].addEventListener("click", function () {
+                    var id      = this.getAttribute("data-id"),
+                        dt      = document.getElementById(id),
+                        elm     = document.createElement("dd"),
+                        input   = document.createElement("input")
+                    ;
+                    input.setAttribute("type", "text");
+                    elm.appendChild(input);
+
+                    dt.parentElement.insertBefore(elm, dt.nextSibling);
+                }, false);
+            }
+        })();
+    </script>
+</body>
