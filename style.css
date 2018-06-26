@@ -307,6 +307,7 @@ table tr {
     border-width: 0 0 1px;
     border-color: #ddd;
     border-style: solid;
+    page-break-inside: avoid;
 }
 
 table tr:last-child {
@@ -592,4 +593,10 @@ form .operations button{
 
 form .operations :not(:first-child){
     margin-left: 10px;
+}
+
+@media print{
+    .noprint{
+        display: none;
+    }
 }
