@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>マイページ</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="./mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="./search.html">学生一覧</a>
+            </li>
+            <li>
+                <a href="./detail.html">学生詳細</a>
+            </li>
+            <li>
+                <a href="./update.html">学生情報更新</a>
+            </li>
+            <li>
+                <a href="./login.html">ログアウト</a>
+            </li>
+            <li>
+                <a href="./temp/list.html">仮登録一覧</a>
+            </li>
+            <li>
+                <a href="./temp/detail.html">仮登録詳細</a>
+            </li>
+            <li>
+                <a href="./temp/register.html">仮登録</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>ユーザ登録</h2>
+                <form id="form">
+                    <label for="id">ユーザID:</label>
+                    <input type="text" id="id">
+                    <label for="name">表示名:</label>
+                    <input type="text" id="name">
+                    <label for="kengen">権限:</label>
+                    <select id="kengen">
+                        <option>選択してください</option>
+                        <option>管理者</option>
+                        <option>事務局職員</option>
+                        <option>その他の職員</option>
+                    </select>
+                    <div class="operations">
+                        <button type="submit">登録</button>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>名前</th>
+                            <th>権限</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>admin</td>
+                            <td>管理者</td>
+                            <td>管理者</td>
+                            <td><a href="" class="re_pw">パスワード初期化</a> / <a href="">名前変更</a> / <a href="">削除</a></td>
+                        </tr>
+                        <tr>
+                            <td>user001</td>
+                            <td>事務 局員</td>
+                            <td>事務局職員</td>
+                            <td><a href="" class="re_pw">パスワード初期化</a> / <a href="">名前変更</a> / <a href="">削除</a></td>
+                        </tr>
+                        <tr>
+                            <td>user002</td>
+                            <td>先生 職員</td>
+                            <td>その他の職員</td>
+                            <td><a href="" class="re_pw">パスワード初期化</a> / <a href="">名前変更</a> / <a href="">削除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <script>
+        (function(){
+            document.getElementById("form").addEventListener("submit", function(){
+                alert("登録しました");
+            });
+
+            var list = document.getElementsByClassName("re_pw"),
+                len  = list.length;
+
+            for(var i = 0; i < len; i++){
+                list[i].addEventListener("click", function(){
+                    alert("パスワードを初期化しました。\n新パスワードは AbcDef12$ です。");
+                });
+            }
+        })();
+    </script>
+</body>
