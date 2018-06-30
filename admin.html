@@ -44,17 +44,19 @@
             <section>
                 <h2>ユーザ登録</h2>
                 <form id="form">
-                    <label for="id">ユーザID:</label>
-                    <input type="text" id="id">
-                    <label for="name">表示名:</label>
-                    <input type="text" id="name">
-                    <label for="kengen">権限:</label>
-                    <select id="kengen">
-                        <option>選択してください</option>
-                        <option>管理者</option>
-                        <option>事務局職員</option>
-                        <option>教員</option>
-                    </select>
+                    <dl>
+                        <dt>職員番号</dt>
+                        <dd><input type="text" pattern="[0-9]{6}" required></dd>
+                        <dt>名前</dt>
+                        <dd><input type="text" required></dd>
+                        <dt>権限</dt>
+                        <dd>
+                            <select required>
+                                <option>教員</option>
+                                <option>事務局職員</option>
+                            </select>
+                        </dd>
+                    </dl>
                     <div class="operations">
                         <button type="submit">登録</button>
                     </div>
@@ -64,7 +66,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>職員番号</th>
                             <th>名前</th>
                             <th>権限</th>
                             <th>操作</th>
@@ -78,13 +80,13 @@
                             <td><a href="" class="re_pw">パスワード初期化</a> / <a href="">名前変更</a> / <a href="">削除</a></td>
                         </tr>
                         <tr>
-                            <td>user001</td>
+                            <td>000100</td>
                             <td>事務 局員</td>
                             <td>事務局職員</td>
                             <td><a href="" class="re_pw">パスワード初期化</a> / <a href="">名前変更</a> / <a href="">削除</a></td>
                         </tr>
                         <tr>
-                            <td>user002</td>
+                            <td>000020</td>
                             <td>先生 職員</td>
                             <td>教員</td>
                             <td><a href="" class="re_pw">パスワード初期化</a> / <a href="">名前変更</a> / <a href="">削除</a></td>
