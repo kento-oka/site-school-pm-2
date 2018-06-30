@@ -46,8 +46,8 @@
             box-sizing: border-box;
             width: 100%;
             height: 30px;
-            background: #5d5;
-            color: #555;
+            background: #555;
+            color: #fff;
         }
 
         header h1 {
@@ -139,7 +139,6 @@
     <script>
         (function(){
             document.getElementById("form_btn").addEventListener("click", function(){
-                alert(document.getElementById("form").id.value);
                 if(document.getElementById("form_id").value === "admin"){
                     document.getElementById("form").setAttribute("action", "./admin.html");
                 }
