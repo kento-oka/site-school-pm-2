@@ -128,12 +128,22 @@
         </div>
     </header>
     <main>
-        <form action="./search.html">
+        <form id="form" action="./search.html">
             <label for="form_id">ID:</label>
-            <input type="text" id="form_id">
+            <input name="id" type="text" id="form_id">
             <label for="form_pw">Password:</label>
             <input type="text" id="form_pw">
-            <button type="submit">ログイン</button>
+            <button id="form_btn" type="submit">ログイン</button>
         </form>
     </main>
+    <script>
+        (function(){
+            document.getElementById("form_btn").addEventListener("click", function(){
+                alert(document.getElementById("form").id.value);
+                if(document.getElementById("form_id").value === "admin"){
+                    document.getElementById("form").setAttribute("action", "./admin.html");
+                }
+            });
+        })();
+    </script>
 </body>
