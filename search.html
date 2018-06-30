@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>学生一覧</title>
@@ -46,12 +47,18 @@
                 <div class="tabs">
                     <input name="tab_item" id="number" type="radio" checked>
                     <label for="number">学籍番号</label>
+                    <input name="tab_item" id="attend" type="radio" checked>
+                    <label for="attend">出席番号</label>
                     <input name="tab_item" id="capacity" type="radio">
                     <label for="capacity">資格</label>
                     <div>
                         <form>
-                            <label for="form_1_number">学籍番号:</label>
-                            <input type="text" id="form_1_number">
+                            <dl>
+                                <dt>学籍番号</dt>
+                                <dd>
+                                    <input type="text">
+                                </dd>
+                            </dl>
                             <div class="operations">
                                 <button type="submit">検索</button>
                             </div>
@@ -59,14 +66,42 @@
                     </div>
                     <div>
                         <form>
-                            <label for="form_2_name">資格名:</label>
-                            <select id="form_2_name">
-                                <option>基本情報技術者試験</option>
-                                <option>応用情報技術者試験</option>
-                                <option>情報処理安全確保支援士</option>
-                            </select>
-                            <lable for="form_2_season">取得時期:</lable>
-                            <input type="month" id="form_2_season">
+                            <dl>
+                                <dt>学年</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                                <dt>クラス</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                                <dt>番号</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>資格名</dt>
+                                <dd>
+                                    <select id="form_2_name">
+                                        <option>基本情報技術者試験</option>
+                                        <option>応用情報技術者試験</option>
+                                        <option>情報処理安全確保支援士</option>
+                                    </select>
+                                    <input type="text">
+                                </dd>
+                                <dt>取得時期</dt>
+                                <dd>
+                                    <input type="month">
+                                </dd>
+                            </dl>
                             <div class="operations">
                                 <button type="submit">検索</button>
                             </div>
