@@ -54,21 +54,14 @@
 
                         <dt>出席番号</dt>
                         <dd>
-                            <input type="text" value="0X00000">
-                        </dd>
-
-                        <dt>住所</dt>
-                        <dd>実家(郵便番号)：
-                            <input type="text" value="0000000">
-                        </dd>
-                        <dd>実家(住所)：
-                            <input type="text" value="兵庫県大阪市京都町 1024-64-32">
-                        </dd>
-                        <dd>自宅(郵便番号)：
-                            <input type="text" value="">
-                        </dd>
-                        <dd>自宅(住所)：
-                            <input type="text" value="">
+                            <dl>
+                                <dt>学年</dt>
+                                <dd><input type="number" value="2"></dd>
+                                <dt>クラス</dt>
+                                <dd><input type="number" value="1"></dd>
+                                <dt>番号</dt>
+                                <dd><input type="number" value="1"></dd>
+                            </dl>
                         </dd>
 
                         <dt>氏名</dt>
@@ -81,15 +74,33 @@
                             <input type="date" value="1998-02-28">
                         </dd>
 
+                        <dt>住所</dt>
+                        <dd>
+                            <dl>
+                                <!-- 本当はもう少しきれいにしたいけど時間がないので勘弁 -->
+                                <dt>実家</dt>
+                                <dd>郵便番号：<input type="text" value="6500002" autocomplete="postal-code"></dd>
+                                <dd>都道府県：<input type="text" value="兵庫県" autocomplete="address-level1"></dd>
+                                <dd>市区町村：<input type="text" value="神戸市中央区北野町" autocomplete="address-level2"></dd>
+                                <dd>番地等　：<input type="text" value="1-1-8" autocomplete="address-line1"></dd>
+                                <dt>自宅</dt>
+                                <dd>郵便番号：<input type="text" value="6500002" autocomplete="postal-code"></dd>
+                                <dd>都道府県：<input type="text" value="兵庫県" autocomplete="address-level1"></dd>
+                                <dd>市区町村：<input type="text" value="神戸市中央区加納町" autocomplete="address-level2"></dd>
+                                <dd>番地等　：<input type="text" value="2-2-7" autocomplete="address-line1"></dd>
+                            </dl>
+                        </dd>
+
                         <dt>連絡先</dt>
-                        <dd>実家：
-                            <input type="tel" value="0000-00-0000">
-                        </dd>
-                        <dd>自宅：
-                            <input type="tel">
-                        </dd>
-                        <dd>携帯：
-                            <input type="tel" value="000-0000-0000">
+                        <dd>
+                            <dl>
+                                <dt>実家</dt>
+                                <dd><input type="tel" value="0000000000"></dd>
+                                <dt>自宅</dt>
+                                <dd><input type="tel" value="0000000000"></dd>
+                                <dt>携帯</dt>
+                                <dd><input type="tel" value="00000000000"></dd>
+                            </dl>
                         </dd>
 
                         <dt>出身校</dt>
@@ -99,15 +110,28 @@
 
                         <dt id="sikaku">取得資格</dt>
                         <dd>
-                            <input type="text" value="基本情報技術者試験 (平成28年春)">
+                            <input type="text" value="基本情報技術者試験">
+                            <input type="month" value="2016-04">
+                            <div class="operations">
+                                <button type="button" class="add_dd" data-id="sikaku">削除</button>
+                            </div>
                         </dd>
                         <dd>
-                            <input type="text" value="応用情報技術者試験 (平成28年秋)">
+                            <input type="text" value="応用情報技術者試験">
+                            <input type="month" value="2016-10">
+                            <div class="operations">
+                                <button type="button" class="add_dd" data-id="sikaku">削除</button>
+                            </div>
                         </dd>
                         <dd>
-                            <input type="text" value="情報処理安全確保支援士(平成29年春)">
-                        </dd>
-                        <dd>
+                            <select>
+                                <option>基本情報技術者試験</option>
+                                <option>応用情報技術者試験</option>
+                                <option>情報処理技術者試験</option>
+                                <option>ネットワークスペシャリスト試験</option>
+                            </select>
+                            <input type="text" placeholder="選択項目に資格がない場合は資格名を入力してください。">
+                            <input type="month">
                             <div class="operations">
                                 <button type="button" class="add_dd" data-id="sikaku">追加</button>
                             </div>
@@ -120,18 +144,7 @@
 
                         <dt id="bikou">備考</dt>
                         <dd>
-                            <input type="text" value="ピアノが弾ける">
-                        </dd>
-                        <dd>
-                            <input type="text" value="声が小さい">
-                        </dd>
-                        <dd>
-                            <input type="text" value="高校で1年不登校">
-                        </dd>
-                        <dd>
-                            <div class="operations">
-                                <button type="button" class="add_dd" data-id="bikou">追加</button>
-                            </div>
+                            <textarea>声が小さくてピアノを弾くのがうまい。</textarea>
                         </dd>
                     </dl>
                     <div class="operations">
@@ -141,24 +154,4 @@
             </section>
         </div>
     </main>
-    <script>
-        (function () {
-            var list = document.getElementsByClassName("add_dd"),
-                length = list.length
-                ;
-            for (var i = 0; i < length; i++) {
-                list[i].addEventListener("click", function () {
-                    var id = this.getAttribute("data-id"),
-                        dt = document.getElementById(id),
-                        elm = document.createElement("dd"),
-                        input = document.createElement("input")
-                        ;
-                    input.setAttribute("type", "text");
-                    elm.appendChild(input);
-
-                    dt.parentElement.insertBefore(elm, dt.nextSibling);
-                }, false);
-            }
-        })();
-    </script>
 </body>
