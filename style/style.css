@@ -397,7 +397,15 @@ form select {
 
 form .operations {
     display: block;
-    margin-top: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+form .operations_vert{
+    display: block;
+    margin: 10px auto 0;
+    width: auto;
+    height: auto;
     text-align: center;
 }
 
@@ -425,8 +433,15 @@ form input[type="submit"]:active, form input[type="button"]:active, form button:
     border-bottom-color: transparent;
 }
 
-form .operations input[type="submit"], form .operations form input[type="button"], form .operations button {
+form .operations input[type="submit"], form .operations input[type="button"], form .operations button {
     display: inline-block;
+}
+
+
+form .operations_vert input[type="submit"], form .operations_vert input[type="button"], form .operations_vert button{
+    display: block;
+    margin: 0 10px 10px;
+    margin-bottom: 10px;
 }
 
 form .operations :not(:first-child) {
