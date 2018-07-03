@@ -10,7 +10,7 @@
 
     for(i = 0; i < alert_list_len; i++){
         alert_list[i].addEventListener("click", function(){
-            alert(ALERT_MSG[alert_list[i].getAttribute("data-alert")])
+            alert(ALERT_MSG[alert_list[i].getAttribute("data-alert")]);
         });
     }
 })();
