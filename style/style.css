@@ -404,6 +404,7 @@ form .operations {
 form .operations_vert{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 10px auto 0;
     width: auto;
     height: auto;
@@ -441,8 +442,7 @@ form .operations input[type="submit"], form .operations input[type="button"], fo
 
 form .operations_vert input[type="submit"], form .operations_vert input[type="button"], form .operations_vert button{
     display: block;
-    margin: 0 10px 10px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 }
 
 form .operations :not(:first-child) {
