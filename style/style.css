@@ -442,38 +442,31 @@ form .operations :not(:first-child) {
 /* pagination */
 
 ul.pagination {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     margin: 10px auto 0;
-    width: auto;
-    height: 2em;
     padding: 0;
-    list-style: none;
+    text-align: center;
 }
 
 ul.pagination li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 2em;
-    height: 2em;
+    display: inline;
+    margin: 0 2px;
     padding: 0;
 }
 
-ul.pagination li a {
-    display: block;
-    width: auto;
-    height: 1em;
+ul.pagination li span, ul.pagination li a {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 1px 8px;
+    background: #eee;
     text-decoration: none;
+    vertical-align: middle;
 }
 
-ul.pagination li.active a {
-    background-color: #668ad8;
-    color: #fff;
+ul.pagination li span {
+    background: #668ad8;
+    color: #333;
 }
 
-ul.pagination li:hover:not(.active) a {
+ul.pagination li a:hover {
     background: #ddd;
 }
