@@ -52,7 +52,7 @@
                         </dd>
                     </dl>
                     <div class="operations">
-                        <button type="submit">登録</button>
+                        <button type="submit" onclick="alert('登録しました')">登録</button>
                     </div>
                 </form>
             </section>
@@ -74,7 +74,7 @@
                             <td>
                                 <form>
                                     <div class="operations_vert">
-                                        <button class="js_alert" data-alert="generate_pw">パスワード初期化</button>
+                                        <button onclick="alert('パスワードを初期化しました。\n新パスワードは AbcDef12$ です。')">パスワード初期化</button>
                                         <button>名前変更</button>
                                         <button>無効化</button>
                                     </div>
@@ -87,7 +87,7 @@
                             <td>
                                 <form>
                                     <div class="operations_vert">
-                                        <button class="js_alert" data-alert="generate_pw">パスワード初期化</button>
+                                        <button onclick="alert('パスワードを初期化しました。\n新パスワードは AbcDef12$ です。')">パスワード初期化</button>
                                         <button>名前変更</button>
                                         <button>無効化</button>
                                     </div>
@@ -101,7 +101,7 @@
                             <td>
                                 <form>
                                     <div class="operations_vert">
-                                        <button class="js_alert" data-alert="generate_pw">パスワード初期化</button>
+                                        <button onclick="alert('パスワードを初期化しました。\n新パスワードは AbcDef12$ です。')">パスワード初期化</button>
                                         <button>名前変更</button>
                                         <button>無効化</button>
                                     </div>
@@ -148,20 +148,4 @@
             </section>
         </div>
     </main>
-    <script>
-        (function () {
-            document.getElementById("form").addEventListener("submit", function () {
-                alert("登録しました");
-            });
-
-            var list = document.getElementsByClassName("re_pw"),
-                len = list.length;
-
-            for (var i = 0; i < len; i++) {
-                list[i].addEventListener("click", function () {
-                    alert("パスワードを初期化しました。\n新パスワードは AbcDef12$ です。");
-                });
-            }
-        })();
-    </script>
 </body>

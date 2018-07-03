@@ -49,17 +49,10 @@
                         </dd>
                     </dl>
                     <div class="operations">
-                        <button class="js_alert" data-msg="change_pw" type="submit">変更</button>
+                        <button type="submit" onclick="alert('パスワードを変更しました。')">変更</button>
                     </div>
                 </form>
             </section>
         </div>
     </main>
-    <script>
-        (function () {
-            document.getElementById("form").addEventListener("submit", function () {
-                alert("パスワードを変更しました。");
-            });
-        })();
-    </script>
 </body>

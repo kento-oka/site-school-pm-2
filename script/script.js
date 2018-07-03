@@ -1,7 +1,7 @@
 (function(){
     var ALERT_MSG   = {
         "generate_pw": "パスワードを初期化しました。\n新パスワードは AbcDef12$ です。",
-        "change_pw": "パスワードを変更しました。"
+        "change_pw": ""
     };
     var alert_list     = document.getElementsByClassName("js_alert"),
         alert_list_len = alert_list.length,
