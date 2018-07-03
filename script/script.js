@@ -3,9 +3,9 @@
         "generate_pw": "パスワードを初期化しました。\n新パスワードは AbcDef12$ です。",
         "change_pw": "パスワードを変更しました。"
     };
-    var alert_list      = document.getElementsByClassName("js_alert")
-        alert_list_len  = alert_list.length,
-        i
+    var alert_list     = document.getElementsByClassName("js_alert")
+        alert_list_len = alert_list.length,
+        i              = 0
     ;
 
     for(i = 0; i < alert_list_len; i++){
