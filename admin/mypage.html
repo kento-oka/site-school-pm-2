@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>マイページ</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/script/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="/admin/mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="/admin/staff.html">職員管理</a>
+            </li>
+            <li>
+                <a href="/admin/certification.html">資格管理</a>
+            </li>
+            <li>
+                <a href="/login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>パスワード変更</h2>
+                <form id="form">
+                    <dl>
+                        <dt>現在のパスワード</dt>
+                        <dd>
+                            <input type="password">
+                        </dd>
+                        <dt>新しいパスワード</dt>
+                        <dd>
+                            <input type="password">
+                        </dd>
+                        <dt>新しいのパスワード(再入力)</dt>
+                        <dd>
+                            <input type="password">
+                        </dd>
+                    </dl>
+                    <div class="operations">
+                        <button type="submit">変更</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script>
+        (function () {
+            document.getElementById("form").addEventListener("submit", function () {
+                alert("パスワードを変更しました。");
+            });
+        })();
+    </script>
+</body>

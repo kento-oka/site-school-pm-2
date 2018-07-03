@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>職員管理</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="/admin/mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="/admin/staff.html">職員管理</a>
+            </li>
+            <li>
+                <a href="/admin/certification.html">資格管理</a>
+            </li>
+            <li>
+                <a href="/login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>職員登録</h2>
+                <form id="form">
+                    <dl>
+                        <dt>職員番号</dt>
+                        <dd>
+                            <input type="text" pattern="[0-9]{6}" required>
+                        </dd>
+                        <dt>名前</dt>
+                        <dd>
+                            <input type="text" required>
+                        </dd>
+                        <dt>権限</dt>
+                        <dd>
+                            <select required>
+                                <option>教員</option>
+                                <option>事務局職員</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <div class="operations">
+                        <button type="submit">登録</button>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>職員番号</th>
+                            <th>名前</th>
+                            <th>権限</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100100</td>
+                            <td>事務員 太郎</td>
+                            <td>事務局職員</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button class="js_alert" data-alert="generate_pw">パスワード初期化</button>
+                                        <button>名前変更</button>
+                                        <button>無効化</button>
+                                    </div>
+                                </form>
+                        </tr>
+                        <tr>
+                            <td>100200</td>
+                            <td>事務員 花子</td>
+                            <td>事務局職員</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button class="js_alert" data-alert="generate_pw">パスワード初期化</button>
+                                        <button>名前変更</button>
+                                        <button>無効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>200100</td>
+                            <td>教員 太郎</td>
+                            <td>教員</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button class="js_alert" data-alert="generate_pw">パスワード初期化</button>
+                                        <button>名前変更</button>
+                                        <button>無効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr class="disable">
+                            <td>200200</td>
+                            <td>教員 花子</td>
+                            <td>教員</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button>有効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li>
+                        <a href="#">«</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">»</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script>
+        (function () {
+            document.getElementById("form").addEventListener("submit", function () {
+                alert("登録しました");
+            });
+
+            var list = document.getElementsByClassName("re_pw"),
+                len = list.length;
+
+            for (var i = 0; i < len; i++) {
+                list[i].addEventListener("click", function () {
+                    alert("パスワードを初期化しました。\n新パスワードは AbcDef12$ です。");
+                });
+            }
+        })();
+    </script>
+</body>

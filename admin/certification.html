@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>資格管理</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/script/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="/admin/mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="/admin/staff.html">職員管理</a>
+            </li>
+            <li>
+                <a href="/admin/certification.html">資格管理</a>
+            </li>
+            <li>
+                <a href="/login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>資格登録</h2>
+                <form id="form">
+                    <dl>
+                        <dt>資格名</dt>
+                        <dd>
+                            <input type="text" required>
+                        </dd>
+                    </dl>
+                    <div class="operations">
+                        <button type="submit">登録</button>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>資格名</th>
+                            <th>取得者総数</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>192</td>
+                            <td>情報処理安全確保支援士試験</td>
+                            <td>5</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button>名前変更</button>
+                                        <button>無効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr class="disable">
+                            <td>10</td>
+                            <td>セキュリティスペシャリスト試験</td>
+                            <td>25</td>
+                            <td>
+                                <form>
+                                    <input type="hidden" name="id" value="200200">
+                                    <div class="operations">
+                                        <button>有効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>168</td>
+                            <td>ネットワークスペシャリスト試験</td>
+                            <td>25</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button>名前変更</button>
+                                        <button>無効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>172</td>
+                            <td>基本情報技術者試験</td>
+                            <td>50</td>
+                            <td>
+                                <form>
+                                    <div class="operations">
+                                        <button>名前変更</button>
+                                        <button>無効化</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li>
+                        <a href="#">«</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">»</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
