@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>学生一覧</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>学生情報管理システム</h1>
+        </div>
+    </header>
+    <menu>
+        <ul>
+            <li>
+                <a href="./mypage.html">マイページ</a>
+            </li>
+            <li>
+                <a href="./search.html">学生一覧</a>
+            </li>
+            <li>
+                <a href="./temp_list.html">仮登録一覧</a>
+            </li>
+            <li>
+                <a href="../login.html">ログアウト</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>検索</h2>
+                <div class="tabs">
+                    <input name="tab_item" id="number" type="radio" checked>
+                    <label for="number">学籍番号</label>
+                    <input name="tab_item" id="attend" type="radio">
+                    <label for="attend">出席番号</label>
+                    <input name="tab_item" id="capacity" type="radio">
+                    <label for="capacity">資格</label>
+                    <input name="tab_item" id="address" type="radio">
+                    <label for="address">住所</label>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>学籍番号</dt>
+                                <dd>
+                                    <input type="text">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>学年</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                                <dt>クラス</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                                <dt>番号</dt>
+                                <dd>
+                                    <input type="number">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>資格名</dt>
+                                <dd>
+                                    <select id="form_2_name">
+                                        <option>基本情報技術者試験</option>
+                                        <option>応用情報技術者試験</option>
+                                        <option>情報処理安全確保支援士</option>
+                                    </select>
+                                    <input type="text" placeholder="登録していない資格はこちらに名前を入力してください。">
+                                </dd>
+                                <dt>取得時期</dt>
+                                <dd>
+                                    <input type="month">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>検索対象</dt>
+                                <dd>
+                                    <label><input type="checkbox">実家</label>
+                                    <label><input type="checkbox">自宅</label>
+                                </dd>
+                                <dt>住所</dt>
+                                <dd>
+                                    <input type="text">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>学生一覧</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>学籍番号</th>
+                            <th>出席番号</th>
+                            <th>氏名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200000">1200000</a>
+                            </td>
+                            <td>1年 1組 1番</td>
+                            <td>山田 太郎</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200001">1200001</a>
+                            </td>
+                            <td>1年 1組 2番</td>
+                            <td>山田 一郎</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200002">1200002</a>
+                            </td>
+                            <td>2年 2組 3番</td>
+                            <td>山田 次郎</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./detail.html?1200003">1200003</a>
+                            </td>
+                            <td>2年 1組 4番</td>
+                            <td>山田 三郎</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li>
+                        <span>1</span>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
