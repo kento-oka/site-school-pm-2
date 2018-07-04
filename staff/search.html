@@ -34,27 +34,18 @@
             <section>
                 <h2>検索</h2>
                 <div class="tabs">
-                    <input name="tab_item" id="number" type="radio" checked>
-                    <label for="number">学籍番号</label>
                     <input name="tab_item" id="attend" type="radio">
                     <label for="attend">出席番号</label>
-                    <input name="tab_item" id="capacity" type="radio">
-                    <label for="capacity">資格</label>
+                    <input name="tab_item" id="number" type="radio" checked>
+                    <label for="number">学籍番号</label>
                     <input name="tab_item" id="address" type="radio">
                     <label for="address">住所</label>
-                    <div>
-                        <form>
-                            <dl>
-                                <dt>学籍番号</dt>
-                                <dd>
-                                    <input type="text">
-                                </dd>
-                            </dl>
-                            <div class="operations">
-                                <button type="submit">検索</button>
-                            </div>
-                        </form>
-                    </div>
+                    <input name="tab_item" id="capacity" type="radio">
+                    <label for="capacity">資格</label>
+                    <input name="tab_item" id="naitei" type="radio">
+                    <label for="naitei">内定先</label>
+                    <input name="tab_item" id="beforeschool" type="radio">
+                    <label for="beforeschool">出身校</label>
                     <div>
                         <form>
                             <dl>
@@ -79,7 +70,44 @@
                     <div>
                         <form>
                             <dl>
-                                <dt>資格名</dt>
+                                <dt>学籍番号</dt>
+                                <dd>
+                                    <input type="text">
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>検索対象</dt>
+                                <dd>
+                                    <label><input type="checkbox">実家</label>
+                                    <label><input type="checkbox">自宅</label>
+                                </dd>
+                                <dt>住所</dt>
+                                <dd>
+                                    <input type="text">
+                                </dd>
+                                <dt>状態</dt>
+                                <dd>
+                                    <label><input type="checkbox" name="status" checked>在学</label>
+                                    <label><input type="checkbox" name="status">卒業</label>
+                                    <label><input type="checkbox" name="status">退学</label>
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>取得資格</dt>
                                 <dd>
                                     <select id="form_2_name">
                                         <option>基本情報技術者試験</option>
@@ -94,9 +122,9 @@
                                 </dd>
                                 <dt>状態</dt>
                                 <dd>
-                                    <label><input type="radio" name="status"  checked>在学</label>
-                                    <label><input type="radio" name="status">卒業</label>
-                                    <label><input type="radio" name="status">退学</label>
+                                    <label><input type="checkbox" name="status" checked>在学</label>
+                                    <label><input type="checkbox" name="status">卒業</label>
+                                    <label><input type="checkbox" name="status">退学</label>
                                 </dd>
                             </dl>
                             <div class="operations">
@@ -107,20 +135,30 @@
                     <div>
                         <form>
                             <dl>
-                                <dt>検索対象</dt>
-                                <dd>
-                                    <label><input type="checkbox"  checked>実家</label>
-                                    <label><input type="checkbox"  checked>自宅</label>
-                                </dd>
-                                <dt>住所</dt>
-                                <dd>
-                                    <input type="text">
-                                </dd>
+                                <dt>企業名</dt>
+                                <dd><input type="text"></dd>
                                 <dt>状態</dt>
                                 <dd>
-                                    <label><input type="radio" name="status" checked>在学</label>
-                                    <label><input type="radio" name="status">卒業</label>
-                                    <label><input type="radio" name="status">退学</label>
+                                    <label><input type="checkbox" name="status" checked>在学</label>
+                                    <label><input type="checkbox" name="status">卒業</label>
+                                    <label><input type="checkbox" name="status">退学</label>
+                                </dd>
+                            </dl>
+                            <div class="operations">
+                                <button type="submit">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form>
+                            <dl>
+                                <dt>学校名</dt>
+                                <dd><input type="text"></dd>
+                                <dt>状態</dt>
+                                <dd>
+                                    <label><input type="checkbox" name="status" checked>在学</label>
+                                    <label><input type="checkbox" name="status">卒業</label>
+                                    <label><input type="checkbox" name="status">退学</label>
                                 </dd>
                             </dl>
                             <div class="operations">
