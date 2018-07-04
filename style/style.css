@@ -461,7 +461,7 @@ form .operations input[type="submit"], form .operations input[type="button"], fo
 
 form .operations_vert input[type="submit"], form .operations_vert input[type="button"], form .operations_vert button{
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 5px 10px;
 }
 
 form .operations :not(:first-child) {
