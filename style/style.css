@@ -500,3 +500,10 @@ ul.pagination li span, ul.pagination li a {
 ul.pagination li a:hover {
     background: #ddd;
 }
+
+.required::after{
+    content: "*必須";
+    font-size: .7em;
+    vertical-align: text-top;
+    color: #d55;
+}
