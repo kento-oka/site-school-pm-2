@@ -110,7 +110,16 @@ menu a, menu a:active, menu a:hover, menu a:visited, menu a:link {
 
 /* --- body --- */
 
-main {
+main{
+    overflow: auto;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 30px);
+    background: #eee;
+}
+menu+main {
     overflow: auto;
     position: absolute;
     top: 30px;
@@ -123,7 +132,7 @@ main {
 }
 
 @media screen and (max-width: 700px) {
-    main {
+    menu+main {
         width: calc(100% - 30px);
         min-width: 320px;
         transform: translateX(30px);
@@ -344,6 +353,7 @@ dl dt {
     height: auto;
     border-top: 1px #fff solid;
     padding: 0;
+    text-align: center;
 }
 
 dl dd {
